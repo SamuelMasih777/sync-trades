@@ -50,6 +50,11 @@ src/
 ```
 
 ---
+## 🧱 System Architecture
+
+![Architecture Diagram](./src/assets/syncTrade.jpg)
+
+---
 
 ## 🧱 Architecture Design
 
