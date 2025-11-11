@@ -16,6 +16,12 @@ class Config {
     apiSecret: string;
     baseUrl: string;
   };
+  interactive: {
+    name: string;
+    baseOrderUrl: string;
+    baseTradesUrl: string;
+    baseAccountInfoUrl: string;
+  };
   messages:{
     internalServerError: string;
   }
@@ -34,6 +40,12 @@ class Config {
       apiKey: process.env.ALPACA_API_KEY || "",
       apiSecret: process.env.ALPACA_API_SECRET || "",
       baseUrl: "https://paper-api.alpaca.markets/v2/orders",
+    };
+    this.interactive = {
+      name: "interactive",
+      baseOrderUrl: "https://localhost:5000/v1/api/iserver/account/orders",
+      baseTradesUrl: "https://localhost:5000/v1/api/iserver/account/trades",
+      baseAccountInfoUrl: "https://localhost:5000/v1/api/portfolio/accounts",
     };
     this.messages={
       internalServerError: "Internal Server Error"
